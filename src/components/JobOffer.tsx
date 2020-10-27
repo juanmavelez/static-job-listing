@@ -5,7 +5,7 @@ import '../assets/styles/components/JobOffer.css'
 const JobOffer = () => {
   return(
   <section className="jobOffer--container">
-    <img className="logo" src="../assets/images/bg-header-mobile.svg" alt="photosnap"/>
+    <img className="logo" src="./src/assets/images/loop-studios.svg" alt="photosnap"/>
     <div className="top-section--content">
       <p >company</p>
       <span className="new">New!</span>
@@ -21,7 +21,6 @@ const JobOffer = () => {
         <li>languages</li>
         <li>languages</li>
     </ul>
-
   </section>
   )
 }

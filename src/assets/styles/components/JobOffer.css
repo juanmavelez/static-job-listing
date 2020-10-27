@@ -1,6 +1,6 @@
 .jobOffer--container {
   position: relative;
-  width: 90%;
+  width: 80%;
   padding: 40px 20px;
   height: auto;
   min-width: 288px;
@@ -10,14 +10,15 @@
   border-radius: 15px;
   border-left: 5px solid var(--Desaturated-Dark-Cyan);
   background-color: white;
+  box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.16);
 }
 
 .jobOffer--container img {
   position: absolute;
-  top: -15px;
-  left: 40px;
-  width: 40px;
-  height: 40px;
+  top: -30px;
+  left: 25px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
