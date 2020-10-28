@@ -31,14 +31,15 @@
 
 .top-section--content p {
   padding: 5px;
+  padding-top: 8px;
   color: var(--Desaturated-Dark-Cyan);
 }
 
 .top-section--content .new {
   padding: 5px;
+  padding-top: 8px;
   border-radius: 15px;
   margin-left: 10px;
-  text-align: center;
   text-transform: uppercase;
   color: var(--Light-Grayish-Cyan);
   background-color: var(--Desaturated-Dark-Cyan);
@@ -46,6 +47,7 @@
 
 .top-section--content .featured {
   padding: 5px;
+  padding-top: 8px;
   margin-left: 10px;
   border-radius: 15px;
   text-transform: uppercase;
