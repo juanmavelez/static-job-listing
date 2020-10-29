@@ -1,11 +1,11 @@
 import React from 'react'
-
+import { IOffers, ICompanies, IRoles, ILevels, ILocations, ILanguages, IContracts, ITools } from '../interfaces/StateInterface'
 import '../assets/styles/components/JobOffer.css'
 
-const JobOffer = () => {
+const JobOffer = (props) => {
   return(
   <section className="jobOffer--container">
-    <img className="logo" src="./src/assets/images/loop-studios.svg" alt="photosnap"/>
+    <img className="logo" src={company.logo} alt="photosnap"/>
     <div className="top-section--content">
       <p >company</p>
       <span className="new">New!</span>

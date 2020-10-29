@@ -1,6 +1,6 @@
-import { State } from '../interfaces';
+import { IState } from '../interfaces/StateInterface'
 
-export const initialState: any = {
+export const initialState: IState = {
   filter: [],
   offers: [
     {
@@ -12,7 +12,7 @@ export const initialState: any = {
       role: 1,
       level: 1,
       postedAt: '1d ago',
-      contract: 'Full Time',
+      contract: 1,
       location: 1,
       languages: [1, 2, 3],
       tools: [],
