@@ -39,3 +39,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.isNotEmpty {
+  margin-bottom: 100px;
+}

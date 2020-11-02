@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { IFilteableItems, IOffers } from '../interfaces/StateInterface'
 import { addFilter } from '../actions/actions'
 import { IAppState } from '../store/configureStore';
-
+import { searchElementById } from '../functions'
 import '../assets/styles/components/JobOffer.css'
 
 const JobOffer = (props: IOffers) => {
@@ -23,7 +23,6 @@ const JobOffer = (props: IOffers) => {
     dispatch(addFilter(item))
   }
 
-
   return (
     <section className={jobFeatured(isFeatured)} id={id.toString()}>
       <img className="logo" src={company.logo} alt="company-logo" />
@@ -41,18 +40,18 @@ const JobOffer = (props: IOffers) => {
         <p> {postedAt} * {contract.name} * {location.name}  </p>
       </div>
       <ul className="lenaguages">
-        <li>{role.name}</li>
-        <li>{level.name}</li>
+        <li onClick={() => { onAddFilter(role) }}> {role.name}</li>
+        <li onClick={() => { onAddFilter(level) }}>{level.name}</li>
         {
           languages.map((item) => {
             const language = searchElementById(item, state.languages)
-            return (<li key={language.id}>{language.name}</li>)
+            return (<li key={language.id} onClick={() => onAddFilter(language)}>{language.name}</li>)
           })
         }
         {
           tools.map((item) => {
             const tool = searchElementById(item, state.tools)
-            return (<li key={tool.id}> {tool.name} </li>)
+            return (<li key={tool.id} onClick={() => onAddFilter(tool)}> {tool.name} </li>)
           })
         }
       </ul>
@@ -68,10 +67,5 @@ function jobFeatured(isFeatured: boolean): string {
   }
 }
 
-
-function searchElementById(itemId: number, input: IFilteableItems[]): IFilteableItems {
-  const outPut = input.find((item: IFilteableItems) => item.id === itemId)!
-  return outPut
-}
 
 export default JobOffer;

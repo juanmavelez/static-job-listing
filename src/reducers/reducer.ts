@@ -8,7 +8,9 @@ export const reducer = (state = initialState, action: IAppActions): IState => {
     case 'ADD_FILTER':
       return {
         ...state,
-        filter: [...state.filter, action.filterItem],
+        filter: [...state.filter, action.filterItem].filter((value, position, actualPosition) => {
+          return actualPosition.indexOf(value) === position;
+        }),
       };
     case 'REMOVE_FILTER':
       return {
