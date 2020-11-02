@@ -1,10 +1,9 @@
 import { IState } from '../interfaces/StateInterface';
-import { AppActions } from '../interfaces/ActionInterface';
+import { IAppActions } from '../interfaces/ActionInterface';
 import { initialState } from './initialState';
 
-const reducerDefaultState: IState = initialState;
 
-export const reducer = (state = reducerDefaultState, action: AppActions): IState => {
+export const reducer = (state = initialState, action: IAppActions): IState => {
   switch (action.type) {
     case 'ADD_FILTER':
       return {

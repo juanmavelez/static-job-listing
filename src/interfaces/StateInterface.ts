@@ -1,11 +1,9 @@
-import { EmptyStatement } from "typescript";
-
 /*  STORE  INTERFACES */
 export interface IOffers {
   id: number;
   company: number;
-  new: boolean;
-  featured: boolean;
+  isNew: boolean;
+  isFeatured: boolean;
   position: string;
   role: number;
   level: number;
@@ -16,54 +14,22 @@ export interface IOffers {
   tools: number[];
 }
 
-export interface ICompanies {
+export interface IFilteableItems {
   id: number;
-  company: string;
-  logo: string;
+  name: string
+  logo?: string
 }
-
-export interface IRoles {
-  id: number;
-  role: string;
-}
-
-export interface ILevels {
-  id: number;
-  level: string;
-}
-
-export interface ILocations {
-  id: number;
-  location: string;
-}
-
-export interface ILanguages {
-  id: number;
-  language: string;
-}
-
-export interface ITools {
-  id: number;
-  tool: string;
-}
-
-export interface IContracts {
-  id: number;
-  contract: string;
-}
-
-export type FilteableItems = ICompanies | IRoles | ILevels | ILocations | ILanguages | IContracts | ITools;
 
 export interface IState {
-  filter: FilteableItems[];
+  filter: IFilteableItems[];
   offers: IOffers[];
-  companies: ICompanies[];
-  roles: IRoles[];
-  contracts: IContracts[];
-  levels: ILevels[];
-  locations: ILocations[];
-  languages: ILanguages[];
-  tools: ITools[];
+  companies: IFilteableItems[];
+  roles: IFilteableItems[];
+  contracts: IFilteableItems[];
+  levels: IFilteableItems[];
+  locations: IFilteableItems[];
+  languages: IFilteableItems[];
+  tools: IFilteableItems[];
 }
 
 /* ------------------------ */

@@ -6,8 +6,8 @@ export const initialState: IState = {
     {
       id: 1,
       company: 1,
-      new: true,
-      featured: true,
+      isNew: true,
+      isFeatured: true,
       position: 'Senior Frontend Developer',
       role: 1,
       level: 1,
@@ -20,8 +20,8 @@ export const initialState: IState = {
     {
       id: 2,
       company: 2,
-      new: true,
-      featured: true,
+      isNew: true,
+      isFeatured: true,
       position: 'Fullstack Developer',
       role: 2,
       level: 2,
@@ -34,10 +34,10 @@ export const initialState: IState = {
     {
       id: 3,
       company: 3,
-      new: true,
-      featured: false,
+      isNew: true,
+      isFeatured: false,
       position: 'Junior Frontend Developer',
-      role: 'Frontend',
+      role: 1,
       level: 3,
       postedAt: '2d ago',
       contract: 2,
@@ -48,8 +48,8 @@ export const initialState: IState = {
     {
       id: 4,
       company: 4,
-      new: false,
-      featured: false,
+      isNew: false,
+      isFeatured: false,
       position: 'Junior Frontend Developer',
       role: 1,
       level: 3,
@@ -62,8 +62,8 @@ export const initialState: IState = {
     {
       id: 5,
       company: 5,
-      new: false,
-      featured: false,
+      isNew: false,
+      isFeatured: false,
       position: 'Software Engineer',
       role: 2,
       level: 2,
@@ -76,8 +76,8 @@ export const initialState: IState = {
     {
       id: 6,
       company: 6,
-      new: false,
-      featured: false,
+      isNew: false,
+      isFeatured: false,
       position: 'Junior Backend Developer',
       role: 3,
       level: 3,
@@ -90,8 +90,8 @@ export const initialState: IState = {
     {
       id: 7,
       company: 7,
-      new: false,
-      featured: false,
+      isNew: false,
+      isFeatured: false,
       position: 'Junior Developer',
       role: 1,
       level: 3,
@@ -104,8 +104,8 @@ export const initialState: IState = {
     {
       id: 8,
       company: 8,
-      new: false,
-      featured: false,
+      isNew: false,
+      isFeatured: false,
       position: 'Junior Frontend Developer',
       role: 1,
       level: 3,
@@ -118,8 +118,8 @@ export const initialState: IState = {
     {
       id: 9,
       company: 9,
-      new: false,
-      featured: false,
+      isNew: false,
+      isFeatured: false,
       position: 'Full Stack Engineer',
       role: 2,
       level: 2,
@@ -132,8 +132,8 @@ export const initialState: IState = {
     {
       id: 10,
       company: 10,
-      new: false,
-      featured: false,
+      isNew: false,
+      isFeatured: false,
       position: 'Front-end Dev',
       role: 1,
       level: 3,
@@ -147,165 +147,165 @@ export const initialState: IState = {
   companies: [
     {
       id: 1,
-      company: 'Photosnap',
+      name: 'Photosnap',
       logo: './images/photosnap.svg',
     },
     {
       id: 2,
-      company: 'Manage',
+      name: 'Manage',
       logo: './images/manage.svg',
     },
     {
       id: 3,
-      company: 'Account',
+      name: 'Account',
       logo: './images/account.svg',
     },
     {
       id: 4,
-      company: 'MyHome',
+      name: 'MyHome',
       logo: './images/myhome.svg',
     },
     {
       id: 5,
-      company: 'Loop Studios',
+      name: 'Loop Studios',
       logo: './images/loop-studios.svg',
     },
     {
       id: 6,
-      company: 'FaceIt',
+      name: 'FaceIt',
       logo: './images/faceit.svg',
     },
     {
       id: 7,
-      company: 'Shortly',
+      name: 'Shortly',
       logo: './images/shortly.svg',
     },
     {
       id: 8,
-      company: 'Insure',
+      name: 'Insure',
       logo: './images/insure.svg',
     },
     {
       id: 9,
-      company: 'Eyecam Co',
+      name: 'Eyecam Co',
       logo: './images/eyecam-co.svg',
     },
     {
       id: 10,
-      company: 'The Air Filter Company',
+      name: 'The Air Filter Company',
       logo: './images/the-air-filter-company.svg',
     },
   ],
   roles: [
     {
       id: 1,
-      role: 'Frontend',
+      name: 'Frontend',
     },
     {
       id: 2,
-      role: 'Fullstack',
+      name: 'Fullstack',
     },
     {
       id: 3,
-      role: 'Backend',
+      name: 'Backend',
     },
   ],
   contracts: [
     {
       id: 1,
-      contract: 'Full Time',
+      name: 'Full Time',
     },
     {
       id: 2,
-      contract: 'Part Time',
+      name: 'Part Time',
     },
     {
       id: 3,
-      contract: 'Contract',
+      name: 'Contract',
     },
   ],
   levels: [
     {
       id: 1,
-      level: 'Senior',
+      name: 'Senior',
     },
     {
       id: 2,
-      level: 'Midweight',
+      name: 'Midweight',
     },
     {
       id: 3,
-      level: 'Junior',
+      name: 'Junior',
     },
   ],
   locations: [
     {
       id: 1,
-      location: 'USA Only',
+      name: 'USA Only',
     },
     {
       id: 2,
-      location: 'Remote',
+      name: 'Remote',
     },
     {
       id: 3,
-      location: 'Worldwide',
+      name: 'Worldwide',
     },
     {
       id: 4,
-      location: 'UK Only',
+      name: 'UK Only',
     },
   ],
   languages: [
     {
       id: 1,
-      language: 'HTML',
+      name: 'HTML',
     },
     {
       id: 2,
-      language: 'CSS',
+      name: 'CSS',
     },
     {
       id: 3,
-      language: 'JavaScript',
+      name: 'JavaScript',
     },
     {
       id: 4,
-      language: 'Python',
+      name: 'Python',
     },
     {
       id: 5,
-      language: 'React',
+      name: 'React',
     },
     {
       id: 6,
-      language: 'Ruby',
+      name: 'Ruby',
     },
   ],
   tools: [
     {
       id: 1,
-      tool: 'React',
+      name: 'React',
     },
     {
       id: 2,
-      tool: 'Sass',
+      name: 'Sass',
     },
     {
       id: 3,
-      tool: 'Ruby',
+      name: 'Ruby',
     },
     {
       id: 4,
-      tool: 'RoR',
+      name: 'RoR',
     },
     {
       id: 5,
-      tool: 'Django',
+      name: 'Django',
     },
     {
       id: 6,
-      tool: 'Vue',
+      name: 'Vue',
     },
   ],
 };

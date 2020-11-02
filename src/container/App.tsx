@@ -1,34 +1,30 @@
 import React from 'react';
-import { useSelector, connect } from 'react-redux';
-import JobOffer from '../components/JobOffer';
-import Filter from '../components/Filter'
-import { IState } from '../interfaces/StateInterface';
 
-import '../assets/styles/global.css'
+import { useSelector } from 'react-redux';
+import { IAppState } from '../store/configureStore';
+
+import JobOffer from '../components/JobOffer';
+import Filter from '../components/Filter';
+
+import '../assets/styles/global.css';
 
 export const App = () => {
-  const filter = useSelector<IState, IState["filter"]>((state) => state.filter)
-  const offers = useSelector<IState, IState["offers"]>((state) => state.offers)
+
+  const offers = useSelector<IAppState, IAppState["state"]["offers"]>((item) => item.state.offers);
+  const filter = useSelector<IAppState, IAppState["state"]["filter"]>((item) => item.state.filter);
+  const filterIsEmpty: boolean = filter.length === 0
 
   return (
-  <>
-    <header />
-    {
-      (filter.length > 0 && (<Filter />))
-    }
-    {offers.map((item) => (
-      <JobOffer key={item.id} {...item} />)
-    )}
-
-  </>)
-}
-
-
-const mapStateToProps = (state: IState) => {
-  return {
-    filter: state.filter,
-    offers: state.offers
-  };
+    <>
+      <header />
+      {
+        !filterIsEmpty && (<Filter />)
+      }
+      {
+        offers.map((item) => {
+          return (<JobOffer key={item.id}{...item} />)
+        })
+      }
+    </>
+  );
 };
-
-export default connect(mapStateToProps, null)(App);

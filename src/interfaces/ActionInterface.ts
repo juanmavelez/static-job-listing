@@ -19,4 +19,4 @@ export interface IClearFilterAction{
   type: typeof CLEAR_FILTER
 }
 
-export type AppActions = IAddfilterAction | IRemoveFilterAction | IClearFilterAction;
+export type IAppActions = IAddfilterAction | IRemoveFilterAction | IClearFilterAction;
