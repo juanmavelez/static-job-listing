@@ -1,4 +1,4 @@
-import React, { f } from 'react'
+import React from 'react'
 
 import { useSelector, useDispatch } from 'react-redux';
 import { IAppState } from '../store/configureStore';
