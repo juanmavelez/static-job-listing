@@ -71,6 +71,7 @@
   font-size: 2rem;
   line-height: 2.4rem;
 }
+
 .offer--container h2:hover {
   color: var(--Desaturated-Dark-Cyan);
 }
@@ -277,4 +278,3 @@ header {
 .isNotEmpty {
   margin-bottom: 100px;
 }
-
