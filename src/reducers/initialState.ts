@@ -148,7 +148,7 @@ export const initialState: IState = {
     {
       id: 1,
       name: 'Photosnap',
-      logo: '../images/photosnap.svg',
+      logo: './images/photosnap.svg',
     },
     {
       id: 2,

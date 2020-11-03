@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { IFilteableItems, IOffers } from '../interfaces/StateInterface'
 import { addFilter } from '../actions/actions'
 import { IAppState } from '../store/configureStore';
-import { searchElementById } from '../functions'
+import { searchElementById } from '../functions/index';
+
 import '../assets/styles/components/JobOffer.css'
 
 const JobOffer = (props: IOffers) => {
@@ -19,13 +20,16 @@ const JobOffer = (props: IOffers) => {
   const location = searchElementById(props.location, state.locations);
   const contract = searchElementById(props.contract, state.contracts);
 
+  const icon = new Image()
+  icon.src = company.logo!
+
   const onAddFilter = (item: IFilteableItems) => {
     dispatch(addFilter(item))
   }
 
   return (
     <section className={jobFeatured(isFeatured)} id={id.toString()}>
-      <img className="logo" src={company.logo} alt="company-logo" />
+      <img className="logo" src={icon.src} alt="company-logo" />
       <div className="top-section--content">
         <p>{company.name}</p>
         {
@@ -66,6 +70,5 @@ function jobFeatured(isFeatured: boolean): string {
     return ("jobOffer--container")
   }
 }
-
 
 export default JobOffer;
